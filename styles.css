@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Kaushan+Script&display=swap');
+
+/* CSS Reset for browser compatibility */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Below are general styles that is going to be used by both html files */
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    font-family: 'Cormorant Garamond', serif;
+    padding: 2em;
+    background-color: rgb(245, 245, 232);
+}
+
+h1{
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;
+    color: red;
+    font-size: 2.5rem;
+    margin: 1.2rem;
+}
+
+p, li{
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin: 1.2rem;
+}
+
+h2, h3{
+    color: rgb(0, 60, 255);
+    font-size: 1.5rem;
+    margin: 1.2rem;
+}
+
+/*==============================
+
+/* Link styles */
+
+a{
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+a:link{
+    color: rgb(28, 121, 209);
+}
+
+/* it refers to links that are not yet visited */
+
+a:visited{
+    color: rgb(255, 185, 54);
+}
+
+/* Changes the color of the link when the link has been visited */
+
+a:hover{
+    color: red;
+    cursor: pointer;
+}
+
+/* Changes the color of the link and changes your cursor to a pointer when hovering on a link*/
+
+
+a:active{
+    color: rgb(17, 255, 17);
+}
+
+/* What the :active pseudoelement does is basically change the color of the link when it is clicked and hold.  */
+
+/*=========================
+
+We style links with the following attributes in a specific order so that it doesn't overwrite each styles
+The style order for the links are
+
+a               // Selects all general links 
+a:link          // Refers to links that haven't been visited by the user
+a:visited       // Refers to the links that were visited by the user
+a:hover         // When the user hovers over the link, all styles that are included here is gonna be initiated
+a:active        // Will initiate all styles inside this when the link is clicked and hold
+
+*==========================*/
+
+
+.NA-note, .endnote{
+    color: rgb(255, 0, 225);
+    font-weight: 600;
+}
+
+/* Styling the Note: */
+
+
+.opening-statement{
+    text-align: center;
+}
+
+/* Style for the paragraph at the beginning of the main.html*/
+
+footer{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* footer for main.html */
+
+/* =================================================================
+/* Styles for the linked html file */
+
+#linked-content{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto 1fr; 
+    gap: 1rem; 
+    grid-template-areas: 
+      "heading heading"
+      "stock-design modded-design";     
+}
+
+#linked-content>h1{
+    grid-area: heading;
+}
+
+.stock-design-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: stock-design;
+}
+
+.modded-design-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: modded-design;
+}
+
+
+.hardtop-container, .softtop-container, .rocket-bunny-container, .carbon-miata-container{
+    width: 50%;
+    height: 350px;
+}
+
+.miata-hardtop-img, .miata-softtop-img, .miata-rocketbunny-img, .miata-carbon-img{
+    width: 100%;
+   height: 200px;
+}
+
+/* Sets all of the images inside the linked html to 100% and a height of 200px so that everything is all the same*/
+
+/* Using IDs and Classes so that it doesn't overlap with the styles from the main html file*/ 
